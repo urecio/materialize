@@ -61,7 +61,7 @@
             options.menuWidth = Number(options.menuWidth.replace('%','')) * window.outerWidth / 100;
           }
           if (!menu_id.hasClass('fixed')) {
-            menu_id.css('left', -1 * (options.menuWidth + 10));
+            if(options.edge === 'left') menu_id.css('left', -1 * (options.menuWidth + 10));
           }
         }
 
