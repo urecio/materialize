@@ -11,6 +11,8 @@
     'use strict';
 
     var Waves = Waves || {};
+
+    if(!document.querySelectorAll.bind) document.querySelectorAll.bind = Function.prototype.bind;
     var $$ = document.querySelectorAll.bind(document);
 
     // Find exact position of element
