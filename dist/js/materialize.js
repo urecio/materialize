@@ -1210,7 +1210,6 @@ $(document).ready(function(){
 
     var Waves = Waves || {};
 
-    if(!document.querySelectorAll.bind) document.querySelectorAll.bind = Function.prototype.bind;
     var $$ = document.querySelectorAll.bind(document);
 
     // Find exact position of element
@@ -2924,7 +2923,7 @@ $(document).ready(function(){
         }
 
 
-
+        
         updateElements($this, $(window).scrollTop());
         $(window).on('scroll.' + $uniqueId, function () {
           var $scrolled = $(window).scrollTop() + options.offset;
@@ -2932,14 +2931,14 @@ $(document).ready(function(){
           updateElements($this, $scrolled);
         });
 
-      });
+      }); 
 
 
 
     };
 
-
-
+  
+  
 
   });
 }( jQuery ));;(function ($) {
@@ -5646,3 +5645,5 @@ Picker.extend( 'pickadate', DatePicker )
 
 
 }));
+
+
