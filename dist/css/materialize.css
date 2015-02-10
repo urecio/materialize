@@ -2083,6 +2083,24 @@ img.responsive-img, video.responsive-video {
   position: fixed; }
 
 /*********************
+  Transition Classes
+**********************/
+ul.staggered-list li {
+  -ms-filter: "progid:DXImageTransform@mixin Microsoft@mixin Alpha(Opacity=${iefactor})";
+  filter: "alpha(opacity=(${iefactor}))";
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0; }
+
+.fade-in {
+  -ms-filter: "progid:DXImageTransform@mixin Microsoft@mixin Alpha(Opacity=${iefactor})";
+  filter: "alpha(opacity=(${iefactor}))";
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+  transform-origin: 0 50%; }
+
+/*********************
   Media Query Classes
 **********************/
 @media only screen and (max-width : 600px) {
@@ -5052,8 +5070,7 @@ nav {
       right: 0.5rem;
       padding: 0; }
   nav ul {
-    margin: 0;
-    float: right; }
+    margin: 0; }
     nav ul li {
       float: left;
       padding: 0px;
@@ -6472,7 +6489,11 @@ select.browser-default {
 select:disabled {
   color: rgba(0, 0, 0, 0.3); }
 
-.select-wrapper input.select-dropdown.disabled {
+.select-wrapper input.select-dropdown:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
+
+.select-wrapper i {
   color: rgba(0, 0, 0, 0.3); }
 
 .select-dropdown li.disabled {
@@ -6734,7 +6755,7 @@ ul.side-nav.fixed {
   ul.side-nav.fixed {
     left: -105%; }
     ul.side-nav.fixed.right-aligned {
-      right: 105%;
+      right: -105%;
       left: auto; }
  }
 
