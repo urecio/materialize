@@ -20,8 +20,6 @@
     // Hardcoded .staggered-list scrollFire
     var staggeredListOptions = [];
     $('ul.staggered-list').each(function (i) {
-
-      console.log(i);
       var label = 'scrollFire-' + i;
       $(this).addClass(label);
       staggeredListOptions.push(
