@@ -133,4 +133,4 @@ $progress-bar-color: $secondary-color;
 
 
 /* List inputs fields*/
-$field-forms :   'input[type=url]', 'input[type=date]', 'input[type=tel]', 'input[type=number]', 'input[type=search]', 'textarea.materialize-textarea';
+$field-forms :   'input[type=url]', 'input[type=date]', 'input[type=tel]', 'input[type=number]', 'input[type=search]', 'textarea.materialize-textarea' !default;
